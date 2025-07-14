@@ -579,9 +579,9 @@ const pdfText = i18n.pdf;
                         
                         <div style="position: relative; z-index: 2; padding-left: 105px;">
                             <h3 style="font-size: 1.125rem; font-weight: 700; margin:0 0 5px 0;">${pdfText.companyName[state.currentLang]}</h3>
-                            <p style="margin: 0; font-size: 10pt;">${pdfText.phone[state.currentLang]}: 0901196093</p>
+                            <p style="margin: 0; font-size: 10pt;">${pdfText.phone[state.currentLang]}: 02838728546</p>
                             <p style="margin: 0; font-size: 10pt;">${pdfText.companyAddress[state.currentLang]}</p>
-                            <p style="margin: 0; font-size: 10pt;">${pdfText.email[state.currentLang]}: doc@tanthuanport.vn</p>
+                            <p style="margin: 0; font-size: 10pt;">${pdfText.email[state.currentLang]}: cms.cont@tanthuanport.vn</p>
                         </div>
                     </td>
 
