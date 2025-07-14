@@ -1,4 +1,4 @@
-// --- PHIÊN BẢN CUỐI CÙNG - V1.4 
+// --- PHIÊN BẢN CUỐI CÙNG - V1.9 (Sửa lỗi Base64) ---
 
 // --- 1. STATE & CONFIG ---
 const staticQrCode = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCAAoACgDASIAAhEBAxEB/8QAGwABAAMBAQEBAAAAAAAAAAAAAAYHCAUEAwL/xAAyEAABAwMCAwUGBwAAAAAAAAABAgMEAAUGBxESIQgTMRQiMkFRYXEVFiQzNEJygZGx/8QAGAEBAQEBAQAAAAAAAAAAAAAAAAECAwT/xAAfEQEAAgICAwEBAAAAAAAAAAAAAQIDERIhMQRBYVH/2gAMAwEAAhEDEQA/APcUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgP/Z";
@@ -44,8 +44,15 @@ const i18n = {
     view: { vi: 'Xem', en: 'View' },
     delete: { vi: 'Xóa', en: 'Delete' },
     dong: { vi: 'đồng', en: 'Dong' },
+    powerKeywords: { vi: 'chạy điện', en: 'power supply' },
+    dateRangeFrom: { vi: 'Từ ngày:', en: 'From date:' },
+    dateRangeTo: { vi: 'Đến ngày:', en: 'To date:' },
+    dateTimeRangeFrom: { vi: 'Từ lúc:', en: 'From:' },
+    dateTimeRangeTo: { vi: 'Đến lúc:', en: 'To:' },
     otherOption: { vi: 'Phương án khác', en: 'Other Service' },
     selectOption: { vi: '-- Chọn phương án --', en: '-- Select a service --' },
+    storageKeywords: { vi: 'lưu bãi', en: 'storage' },
+    powerKeywords: { vi: 'chạy điện', en: 'power supply' },
     confirmClear: { vi: 'Tạo báo giá mới sẽ xóa toàn bộ thông tin hiện tại. Bạn có chắc chắn?', en: 'This will clear all current quotation data. Are you sure?' },
     confirmDeleteService: { vi: 'Xóa phương án "{name}"?', en: 'Delete service "{name}"?' },
     confirmDeleteQuote: { vi: 'Bạn có chắc muốn xóa báo giá này không?', en: 'Are you sure you want to delete this quotation?' },
@@ -89,7 +96,21 @@ const i18n = {
         accountName: { vi: 'Tên tài khoản', en: 'Account Name' },
         accountNumber: { vi: 'Số tài khoản', en: 'Account Number' },
         taxNote: { vi: 'QUÝ KHÁCH HÀNG VUI LÒNG CUNG CẤP MÃ SỐ THUẾ, ĐỊA CHỈ VÀ EMAIL ĐỂ NHẬN HÓA ĐƠN.', en: 'PLEASE PROVIDE YOUR TAX CODE, ADDRESS AND EMAIL TO RECEIVE THE INVOICE.' },
-        otherOptionNote: { vi: '(Chi tiết trong Ghi chú)', en: '(Details in Notes)' }
+        otherOptionNote: { vi: '(Chi tiết trong Ghi chú)', en: '(Details in Notes)' },
+        // [CẢI TIẾN] Thêm nội dung cho phần Lưu ý cố định
+        quoteNotesTitle: { vi: 'Lưu ý:', en: 'Notes:' },
+        quoteNotesContent: { 
+        vi: `
+            <li style="margin-bottom: 4px;">Chúng tôi báo giá theo thông tin khách hàng cung cấp, vui lòng kiểm tra lại phương án.</li>
+            <li style="margin-bottom: 4px;">Đối với phương án đóng/rút/sang container, chúng tôi không chịu trách nhiệm việc tháo gỡ, chằng buộc hàng hoá, cũng như các hư hỏng bên trong container như xước, gãy ván sàn...</li>
+            <li>Nếu phát sinh thêm phương án, sẽ căn cứ vào thực tế hiện trường để thu phí bổ sung.</li>
+        `,
+        en: `
+            <li style="margin-bottom: 4px;">This quotation is based on the information provided by the customer. Please double-check the service details.</li>
+            <li style="margin-bottom: 4px;">For stuffing/unstuffing services, we are not responsible for unlashing/lashing cargo or any internal container damages such as scratches, broken floorboards, etc.</li>
+            <li>Additional services arising on-site will be charged based on the actual work performed.</li>
+        `
+    }
     }
 };
 
@@ -176,6 +197,17 @@ const showToast = (message, type = 'success') => { elements.toast.textContent = 
 const debounce = (func, delay) => { let timeout; return (...args) => { clearTimeout(timeout); timeout = setTimeout(() => func.apply(this, args), delay); }; };
 const showModal = (modalElement) => { modalElement.style.display = 'block'; };
 const hideModal = (modalElement) => { modalElement.style.display = 'none'; };
+
+// [CẢI TIẾN] Thêm hàm để chuyển chuỗi DD/MM/YYYY thành đối tượng Date
+function parseDateString(dateString) {
+    const parts = dateString.split('/');
+    if (parts.length === 3) {
+        // parts[1] - 1 vì tháng trong JavaScript bắt đầu từ 0 (0 = Tháng 1)
+        return new Date(parts[2], parts[1] - 1, parts[0]);
+    }
+    return null; // Trả về null nếu định dạng không hợp lệ
+}
+// [CẢI TIẾN] Sửa lại hàm đọc số cho phù hợp hơn với tiếng Việt
 function numberToWords_VI(n) { if (n === undefined || n === null || isNaN(n) || n === 0) return "Không"; const units = ["", "một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín"], teens = ["mười", "mười một", "mười hai", "mười ba", "mười bốn", "mười lăm", "mười sáu", "mười bảy", "mười tám", "mười chín"], tens = ["", "mười", "hai mươi", "ba mươi", "bốn mươi", "năm mươi", "sáu mươi", "bảy mươi", "tám mươi", "chín mươi"], powersOfTen = ["", "ngàn", "triệu", "tỷ"]; function convertChunk(num) { let str = "", h = Math.floor(num / 100), t = Math.floor((num % 100) / 10), u = num % 10; if (h > 0) str += units[h] + " trăm "; if (t === 1) str += teens[u] + " "; else if (t > 1) { str += tens[t] + " "; if (u === 1) str += "mốt "; else if (u > 0) str += units[u] + " "; } else if (u > 0) { if (h > 0) str += "lẻ "; str += units[u] + " "; } return str.trim(); } function convertInteger(num) { if (num === 0) return "không"; if (num < 0) return "âm " + convertInteger(Math.abs(num)); let word = "", i = 0, tempNum = num; while (tempNum > 0) { if (tempNum % 1000 !== 0) { const chunkWord = convertChunk(tempNum % 1000); if (chunkWord) word = chunkWord + " " + powersOfTen[i] + " " + word; } tempNum = Math.floor(tempNum / 1000); i++; } return word.trim(); } const integerPart = Math.trunc(n); let integerWords = convertInteger(integerPart); return integerWords.charAt(0).toUpperCase() + integerWords.slice(1); }
 function numberToWords_EN(n) { if (n === 0) return 'Zero'; const below_20 = ['','One','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Eleven','Twelve','Thirteen','Fourteen','Fifteen','Sixteen','Seventeen','Eighteen','Nineteen']; const tens = ['','','Twenty','Thirty','Forty','Fifty','Sixty','Seventy','Eighty','Ninety']; const thousands = ['','Thousand','Million','Billion']; function helper(num) { if (num === 0) return ''; if (num < 20) return below_20[num] + ' '; if (num < 100) return tens[Math.floor(num/10)] + ' ' + helper(num % 10); return below_20[Math.floor(num/100)] + ' Hundred ' + helper(num % 100); } let word = ''; let i = 0; while (n > 0) { if (n % 1000 !== 0) { word = helper(n % 1000) + thousands[i] + ' ' + word; } n = Math.floor(n / 1000); i++; } return word.trim(); }
 
@@ -187,13 +219,64 @@ function createTableRow() {
     const selectOptionText = i18n.selectOption[state.currentLang];
 
     row.innerHTML = `
-        <td class="px-4 py-2"><select class="product-select mt-1 block w-full rounded-md border-gray-300 shadow-sm sm:text-sm"><option value="">${selectOptionText}</option>${productOptions}</select></td>
-        <td class="px-4 py-2"><input type="number" class="qty-input mt-1 block w-full rounded-md border-gray-300 shadow-sm sm:text-sm" value="1" min="1"></td>
-        <td class="px-4 py-2"><input type="number" class="price-input mt-1 block w-full rounded-md border-gray-300 shadow-sm sm:text-sm bg-gray-100" value="0" min="0" readonly></td>
-        <td class="px-4 py-2"><span class="line-total font-bold text-gray-900">0 đ</span></td>
-        <td class="px-2 py-2 text-center"><button class="remove-row-btn text-red-500 hover:text-red-700 font-bold">×</button></td>
+        <td class="px-4 py-2 align-top">
+            <select class="product-select mt-1 block w-full rounded-md border-gray-300 shadow-sm sm:text-sm">
+                <option value="">${selectOptionText}</option>
+                ${productOptions}
+            </select>
+            
+            <div class="calculation-picker date-range-picker">
+                <label>${i18n.dateRangeFrom[state.currentLang]}</label>
+                <input type="text" class="start-date-input" placeholder="Chọn ngày bắt đầu">
+                <label>${i18n.dateRangeTo[state.currentLang]}</label>
+                <input type="text" class="end-date-input" placeholder="Chọn ngày kết thúc">
+            </div>
+
+            <div class="calculation-picker datetime-range-picker">
+                <label>${i18n.dateTimeRangeFrom[state.currentLang]}</label>
+                <input type="text" class="start-datetime-input" placeholder="Chọn ngày & giờ bắt đầu">
+                <label>${i18n.dateTimeRangeTo[state.currentLang]}</label>
+                <input type="text" class="end-datetime-input" placeholder="Chọn ngày & giờ kết thúc">
+            </div>
+        </td>
+        <td class="px-4 py-2 align-top"><input type="number" class="qty-input mt-1 block w-full rounded-md border-gray-300 shadow-sm sm:text-sm" value="1" min="0" step="0.5"></td>
+        <td class="px-4 py-2 align-top"><input type="number" class="price-input mt-1 block w-full rounded-md border-gray-300 shadow-sm sm:text-sm bg-gray-100" value="0" min="0" readonly></td>
+        <td class="px-4 py-2 align-top"><span class="line-total font-bold text-gray-900">0 đ</span></td>
+        <td class="px-2 py-2 align-top text-center"><button class="remove-row-btn text-red-500 hover:text-red-700 font-bold">×</button></td>
     `;
     elements.tableBody.appendChild(row);
+
+    const lastRow = elements.tableBody.lastElementChild;
+    initFlatpickr(lastRow);
+}
+function initFlatpickr(rowElement) {
+    // Tùy chọn cho chỉ chọn ngày (Lưu bãi)
+    const dateOnlyOptions = {
+        dateFormat: "d/m/Y", // Chỉ ngày/tháng/năm
+        onChange: function(selectedDates, dateStr, instance) {
+            instance.element.dispatchEvent(new Event('input', { bubbles: true }));
+        }
+    };
+
+    // Tùy chọn cho chọn cả ngày và giờ (Chạy điện)
+    const dateTimeOptions = {
+        enableTime: true,
+        dateFormat: "d/m/Y H:i",
+        time_24hr: true,
+        minuteIncrement: 30,
+        onChange: function(selectedDates, dateStr, instance) {
+            instance.element.dispatchEvent(new Event('input', { bubbles: true }));
+        }
+    };
+
+    // Gắn tùy chọn tương ứng cho từng loại input
+    rowElement.querySelectorAll('.start-date-input, .end-date-input').forEach(input => {
+        flatpickr(input, dateOnlyOptions);
+    });
+
+    rowElement.querySelectorAll('.start-datetime-input, .end-datetime-input').forEach(input => {
+        flatpickr(input, dateTimeOptions);
+    });
 }
 
 function recalculateTotals() {
@@ -309,14 +392,14 @@ function saveProducts() {
 
 function loadProducts() {
     const defaultProducts = {
-        vi: [ { name: 'Nâng / Hạ container tại bãi - Cont 20\' có hàng', unit: 'Lần', price: 409320 }, { name: 'Nâng / Hạ container tại bãi - Cont 20\' rỗng', unit: 'Lần', price: 291600 }, { name: 'Nâng / Hạ container tại bãi - Cont 40\' có hàng', unit: 'Lần', price: 690120 }, { name: 'Nâng / Hạ container tại bãi - Cont 40\' rỗng', unit: 'Lần', price: 439560 }, { name: 'Bốc xếp Bãi -> Sàlan - Cont 20\' có hàng', unit: 'Lần', price: 691740 }, { name: 'Bốc xếp Bãi -> Sàlan - Cont 20\' rỗng', unit: 'Lần', price: 353160 }, { name: 'Vận chuyển container nội bộ Cảng - Cont 20\' có hàng', unit: 'Lần', price: 162000 }, { name: 'Cân container - Cont 20\' xuất', unit: 'Lần', price: 86400 }, { name: 'Vệ sinh container - Cont 20\' quét rửa', unit: 'Lần', price: 172800 }, ],
-        en: [ { name: 'Lift On/Off at Yard - 20\' Container (Full)', unit: 'Turn', price: 409320 }, { name: 'Lift On/Off at Yard - 20\' Container (Empty)', unit: 'Turn', price: 291600 }, { name: 'Lift On/Off at Yard - 40\' Container (Full)', unit: 'Turn', price: 690120 }, { name: 'Lift On/Off at Yard - 40\' Container (Empty)', unit: 'Turn', price: 439560 }, { name: 'Loading from Yard to Barge - 20\' Container (Full)', unit: 'Turn', price: 691740 }, ]
+        vi: [ { name: 'Nâng / Hạ container tại bãi - Cont 20\' có hàng', unit: 'cont', price: 409320 }, { name: 'Nâng / Hạ container tại bãi - Cont 20\' rỗng', unit: 'cont', price: 291600 }, { name: 'Nâng / Hạ container tại bãi - Cont 40\' có hàng', unit: 'cont', price: 690120 }, { name: 'Nâng / Hạ container tại bãi - Cont 40\' rỗng', unit: 'cont', price: 439560 }, { name: 'Bốc xếp Bãi -> Sàlan - Cont 20\' có hàng', unit: 'cont', price: 691740 }, { name: 'Bốc xếp Bãi -> Sàlan - Cont 20\' rỗng', unit: 'cont', price: 353160 }, { name: 'Vận chuyển container nội bộ Cảng - Cont 20\' có hàng', unit: 'cont', price: 162000 }, { name: 'Cân container - Cont 20\' xuất', unit: 'cont', price: 86400 }, { name: 'Vệ sinh container - Cont 20\' quét rửa', unit: 'cont', price: 172800 }, ],
+        en: [ { name: 'Lift On/Off at Yard - 20\' Container (Full)', unit: 'cont', price: 409320 }, { name: 'Lift On/Off at Yard - 20\' Container (Empty)', unit: 'cont', price: 291600 }, { name: 'Lift On/Off at Yard - 40\' Container (Full)', unit: 'cont', price: 690120 }, { name: 'Lift On/Off at Yard - 40\' Container (Empty)', unit: 'cont', price: 439560 }, { name: 'Loading from Yard to Barge - 20\' Container (Full)', unit: 'cont', price: 691740 }, ]
     };
     state.products = JSON.parse(localStorage.getItem(`tanthuan_products_${state.currentLang}`)) || defaultProducts[state.currentLang];
     
     const otherOptionName = i18n.otherOption[state.currentLang];
     if (!state.products.find(p => p.name === otherOptionName)) {
-        state.products.push({ name: otherOptionName, unit: state.currentLang === 'vi' ? 'Lần' : 'Turn', price: 0 });
+        state.products.push({ name: otherOptionName, unit: state.currentLang === 'vi' ? 'cont' : 'Turn', price: 0 });
     }
 }
 
@@ -325,7 +408,16 @@ function validateForm() {
     const fieldsToValidate = [
         { element: elements.customerName, errorKey: 'toastNoCustomer' },
         { element: elements.invoiceNumber, errorKey: 'toastNoQuoteNo' },
-        { element: elements.invoiceDate, errorKey: 'toastInvalidDate', validator: (el) => el.value && new Date(el.value) <= new Date() }
+        // [SỬA LỖI] Cập nhật validator để xử lý định dạng DD/MM/YYYY
+        { 
+            element: elements.invoiceDate, 
+            errorKey: 'toastInvalidDate', 
+            validator: (el) => {
+                const date = parseDateString(el.value);
+                // Ngày hợp lệ và không phải là ngày trong tương lai
+                return date && date <= new Date();
+            }
+        }
     ];
 
     fieldsToValidate.forEach(field => field.element.classList.remove('input-error'));
@@ -441,7 +533,7 @@ function waitForImageLoad(imageElement) {
 }
 
 function generateA4HTML(qrCodeBase64) {
-    const invoiceDate = new Date(elements.invoiceDate.value).toLocaleDateString(state.currentLang === 'vi' ? 'vi-VN' : 'en-GB');
+    const invoiceDate = elements.invoiceDate.value;
     let itemsHTML = '';
     document.querySelectorAll('.item-row').forEach((row, index) => {
         const select = row.querySelector('.product-select');
@@ -449,7 +541,7 @@ function generateA4HTML(qrCodeBase64) {
         if (!productName) return;
 
         const product = state.products.find(p => p.name === productName);
-        const unit = product ? product.unit : (state.currentLang === 'vi' ? 'Lần' : 'Turn');
+        const unit = product ? product.unit : (state.currentLang === 'vi' ? 'cont' : 'Turn');
         const qty = row.querySelector('.qty-input').value;
         const price = parseFloat(row.querySelector('.price-input').value) || 0;
         const lineTotal = row.querySelector('.line-total').textContent;
@@ -459,7 +551,7 @@ function generateA4HTML(qrCodeBase64) {
         itemsHTML += `
             <tr class="border-b">
                 <td style="padding: 8px; border: 1px solid #ccc; text-align: center;">${index + 1}</td>
-                <td style="padding: 8px; border: 1px solid #ccc;">${displayName}</td>
+                <td style="padding: 8px; border: 1px solid #ccc; word-break: break-word; white-space: normal;">${displayName}</td>
                 <td style="padding: 8px; border: 1px solid #ccc; text-align: center;">${unit}</td>
                 <td style="padding: 8px; border: 1px solid #ccc; text-align: center;">${qty}</td>
                 <td style="padding: 8px; border: 1px solid #ccc; text-align: right;">${formatCurrency(price)}</td>
@@ -467,35 +559,54 @@ function generateA4HTML(qrCodeBase64) {
             </tr>
         `;
     });
-
-    const pdfText = i18n.pdf;
+const pdfText = i18n.pdf;
     return `
         <div style="font-family: 'Roboto', sans-serif; color: #000;">
-            <table style="width: 100%; border-collapse: collapse; margin-bottom: 2rem;">
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 1.5rem;">
                 <tr>
-                    <td style="width: 60%; border: none; vertical-align: top;">
-                        <h3 style="font-size: 1.125rem; font-weight: 700; margin:0;">${pdfText.companyName[state.currentLang]}</h3>
-                        <p style="margin: 0; font-size: 11pt;">${pdfText.phone[state.currentLang]}: 02838728546</p>
-                        <p style="margin: 0; font-size: 11pt;">${pdfText.companyAddress[state.currentLang]}</p>
-                        <p style="margin: 0; font-size: 11pt;">${pdfText.email[state.currentLang]}: cms.cont@tanthuanport.vn</p>
+                    <!-- Cột 1: Thông tin công ty -->
+                    <td style="width: 60%; vertical-align: top; position: relative; padding: 0;">
+                        <img src="logo.png" alt="Logo" style="
+                            position: absolute;
+                            top: 50%;
+                            left: 0; /* Đặt sát lề trái của ô */
+                            transform: translateY(-50%);
+                            width: 90px;
+                            height: auto;
+                            opacity: 0.15;
+                            z-index: 1;
+                        ">
+                        
+                        <div style="position: relative; z-index: 2; padding-left: 105px;">
+                            <h3 style="font-size: 1.125rem; font-weight: 700; margin:0 0 5px 0;">${pdfText.companyName[state.currentLang]}</h3>
+                            <p style="margin: 0; font-size: 10pt;">${pdfText.phone[state.currentLang]}: 0901196093</p>
+                            <p style="margin: 0; font-size: 10pt;">${pdfText.companyAddress[state.currentLang]}</p>
+                            <p style="margin: 0; font-size: 10pt;">${pdfText.email[state.currentLang]}: doc@tanthuanport.vn</p>
+                        </div>
                     </td>
-                    <td style="width: 40%; border: none; text-align: left; vertical-align: top; padding-left: 2rem;">
+
+                    <!-- Cột 2: Số & Ngày báo giá -->
+                    <!-- [CẢI TIẾN] Thêm text-align: right và bỏ padding-left -->
+                    <td style="width: 40%; vertical-align: top; text-align: right;">
                         <p style="margin: 0; font-size: 11pt;"><strong>${pdfText.quoteNo[state.currentLang]}:</strong> ${elements.invoiceNumber.value}</p>
                         <p style="margin: 0; font-size: 11pt;"><strong>${pdfText.date[state.currentLang]}:</strong> ${invoiceDate}</p>
                     </td>
                 </tr>
             </table>
             
-            <div style="text-align: center; margin-bottom: 2rem;">
+            <div style="text-align: center; margin-bottom: 1.5rem;">
                 <h1 style="font-size: 2.25rem; font-weight: 700; margin-bottom: 0;">${pdfText.title[state.currentLang]}</h1>
                 <p style="font-size: 11pt; font-style: italic; margin-top: 4px;">${pdfText.vatIncluded[state.currentLang]}</p>
             </div>
             
-            <table style="width: 100%; border-collapse: collapse; margin-bottom: 2rem; font-size: 11pt;">
-                 <tr><td style="border: none; padding: 2px 0; width: 15%; font-weight: bold; white-space: nowrap;">${pdfText.customerName[state.currentLang]}:</td><td style="border: none; padding: 2px 0;">${elements.customerName.value}</td></tr>
-                 <tr><td style="border: none; padding: 2px 0; width: 15%; font-weight: bold; white-space: nowrap;">${pdfText.address[state.currentLang]}:</td><td style="border: none; padding: 2px 0;">${elements.customerAddress.value}</td></tr>
-                 <tr><td style="border: none; padding: 2px 0; width: 15%; font-weight: bold; white-space: nowrap;">${pdfText.phone[state.currentLang]}:</td><td style="border: none; padding: 2px 0;">${elements.customerPhone.value}</td></tr>
-                 <tr><td style="border: none; padding: 2px 0; width: 15%; font-weight: bold; white-space: nowrap;">${pdfText.notes[state.currentLang]}:</td><td style="border: none; padding: 2px 0;">${elements.customerNotes.value}</td></tr>
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 1.2rem; font-size: 11pt;">
+                 <tr><td style="border: none; padding: 2px 0; width: 15%; font-weight: bold; white-space: nowrap; vertical-align: top;">${pdfText.customerName[state.currentLang]}:</td><td style="border: none; padding: 2px 0;">${elements.customerName.value}</td></tr>
+                 <tr><td style="border: none; padding: 2px 0; width: 15%; font-weight: bold; white-space: nowrap; vertical-align: top;">${pdfText.address[state.currentLang]}:</td><td style="border: none; padding: 2px 0;">${elements.customerAddress.value}</td></tr>
+                 <tr><td style="border: none; padding: 2px 0; width: 15%; font-weight: bold; white-space: nowrap; vertical-align: top;">${pdfText.phone[state.currentLang]}:</td><td style="border: none; padding: 2px 0;">${elements.customerPhone.value}</td></tr>
+                 <tr>
+                    <td style="border: none; padding: 2px 0; width: 15%; font-weight: bold; white-space: nowrap; vertical-align: top;">${pdfText.notes[state.currentLang]}:</td>
+                    <td style="border: none; padding: 2px 0; word-break: break-word; white-space: normal;">${elements.customerNotes.value}</td>
+                 </tr>
             </table>
 
             <table style="width: 100%; border-collapse: collapse; margin-bottom: 1rem; font-size: 11pt;">
@@ -525,7 +636,27 @@ function generateA4HTML(qrCodeBase64) {
                 </tr>
             </table>
 
-            <table style="width: 100%; border-collapse: collapse; margin-top: 4rem; border-top: 1px solid #ccc; padding-top: 1rem;"><tr><td style="width: 70%; border: none; vertical-align: top;"><h4 style="font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem;">${pdfText.paymentInfo[state.currentLang]}</h4><p style="margin: 0; font-size: 11pt;">${pdfText.bank[state.currentLang]}: <strong>BIDV - Chau Thanh Sai Gon Branch</strong></p><p style="margin: 0; font-size: 11pt;">${pdfText.accountName[state.currentLang]}: <strong>CONG TY CO PHAN CANG SAI GON</strong></p><p style="margin: 0; font-size: 11pt;">${pdfText.accountNumber[state.currentLang]}: <strong style="color: #d0021b !important;">8608393979</strong></p><p style="margin-top: 2rem; font-size: 0.875rem; font-style: italic;">${pdfText.taxNote[state.currentLang]}</p></td><td style="width: 30%; border: none; text-align: right; vertical-align: top;"><img src="${qrCodeBase64}" alt="QR Code" style="width: 120px; height: 120px; display: inline-block;" id="qr-code-image"></td></tr></table>
+            <div style="margin-top: 20px; font-size: 10pt; border: 1px solid #ddd; padding: 10px 15px; border-radius: 5px; background-color: #f9f9f9 !important; -webkit-print-color-adjust: exact;">
+                <h4 style="font-weight: bold; margin: 0 0 8px 0; font-size: 11pt;">${pdfText.quoteNotesTitle[state.currentLang]}</h4>
+                <ul class="custom-list">
+                    ${pdfText.quoteNotesContent[state.currentLang]}
+                </ul>
+            </div>
+
+            <table style="width: 100%; border-collapse: collapse; margin-top: 1.5rem; border-top: 1px solid #ccc; padding-top: 1rem;">
+                <tr>
+                    <td style="width: 70%; border: none; vertical-align: top;">
+                        <h4 style="font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem;">${pdfText.paymentInfo[state.currentLang]}</h4>
+                        <p style="margin: 0; font-size: 11pt;">${pdfText.bank[state.currentLang]}: <strong>BIDV - Chau Thanh Sai Gon Branch</strong></p>
+                        <p style="margin: 0; font-size: 11pt;">${pdfText.accountName[state.currentLang]}: <strong>CONG TY CO PHAN CANG SAI GON</strong></p>
+                        <p style="margin: 0; font-size: 11pt;">${pdfText.accountNumber[state.currentLang]}: <strong style="color: #d0021b !important;">8608393979</strong></p>
+                        <p style="margin-top: 2rem; font-size: 0.875rem; font-style: italic;">${pdfText.taxNote[state.currentLang]}</p>
+                    </td>
+                    <td style="width: 30%; border: none; text-align: right; vertical-align: top;">
+                        <img src="${qrCodeBase64}" alt="QR Code" style="width: 120px; height: 120px; display: inline-block;" id="qr-code-image">
+                    </td>
+                </tr>
+            </table>
         </div>
     `;
 }
@@ -561,15 +692,18 @@ async function renderPreviewToCanvas() {
         const qrCodeBase64 = await getDynamicQrCodeBase64(state.rawTotalAmount, elements.invoiceNumber.value); 
         elements.a4ContentWrapper.innerHTML = generateA4HTML(qrCodeBase64); 
         
-        const qrImage = document.getElementById('qr-code-image');
-        await Promise.all([
-            waitForImageLoad(qrImage),
-            document.fonts.ready
-        ]);
+        await new Promise(resolve => setTimeout(resolve, 0));
+
+        const imagesToLoad = [
+            waitForImageLoad(document.getElementById('qr-code-image')),
+            waitForImageLoad(document.querySelector('#a4-content-wrapper img[alt="Logo"]'))
+        ];
+        
+        await Promise.all([...imagesToLoad, document.fonts.ready]);
 
         const canvas = await html2canvas(elements.a4ContentWrapper, { 
-            scale: 2.0,
-            useCORS: true,
+            scale: 1.5,
+            useCORS: true, // <-- Vẫn giữ lại dòng này
             scrollX: 0,
             scrollY: 0,
             windowWidth: elements.a4ContentWrapper.scrollWidth,
@@ -599,28 +733,30 @@ async function generatePdf() {
         const qrCodeBase64 = await getDynamicQrCodeBase64(state.rawTotalAmount, elements.invoiceNumber.value); 
         elements.a4ContentWrapper.innerHTML = generateA4HTML(qrCodeBase64); 
         
-        const qrImage = document.getElementById('qr-code-image');
-        await Promise.all([
-            waitForImageLoad(qrImage),
-            document.fonts.ready
-        ]);
+        // [SỬA LỖI] Chờ một chu kỳ render để đảm bảo DOM đã được cập nhật
+        await new Promise(resolve => setTimeout(resolve, 0));
+
+        const imagesToLoad = [
+            waitForImageLoad(document.getElementById('qr-code-image')),
+            waitForImageLoad(document.querySelector('#a4-content-wrapper img[alt="Logo"]'))
+        ];
+
+        await Promise.all([...imagesToLoad, document.fonts.ready]);
 
         const { jsPDF } = window.jspdf; 
         const doc = new jsPDF({ orientation: 'p', unit: 'mm', format: 'a4' }); 
         const canvas = await html2canvas(elements.a4ContentWrapper, { 
-            scale: 3, 
-            useCORS: true,
+            scale: 1.5, 
+            useCORS: true, // <-- Vẫn giữ lại dòng này
             scrollX: 0,
             scrollY: 0,
             windowWidth: elements.a4ContentWrapper.scrollWidth,
             windowHeight: elements.a4ContentWrapper.scrollHeight
         }); 
-        // Chuyển sang định dạng JPEG để có thể nén
-        const imgData = canvas.toDataURL('image/jpeg', 0.90); // 0.90 là chất lượng (90%)
+        const imgData = canvas.toDataURL('image/jpeg', 0.85);
         const pdfWidth = doc.internal.pageSize.getWidth(); 
         const pdfHeight = doc.internal.pageSize.getHeight(); 
-// Thêm ảnh với tùy chọn nén JPEG
-        doc.addImage(imgData, 'JPEG', 0, 0, pdfWidth, pdfHeight, undefined, 'FAST'); // 'FAST' hoặc 'MEDIUM' 
+        doc.addImage(imgData, 'JPEG', 0, 0, pdfWidth, pdfHeight, undefined, 'FAST');
         doc.output('dataurlnewwindow'); 
         showToast('PDF opened in a new tab!'); 
     } catch (error) { 
@@ -634,18 +770,92 @@ async function generatePdf() {
 
 // --- 7. EVENT HANDLERS ---
 function handleTableRowInput(e) {
-    if (e.target.classList.contains('qty-input') || e.target.classList.contains('price-input')) {
-        recalculateTotals();
-    }
-}
+    const target = e.target;
+    const row = target.closest('.item-row');
+    if (!row) return;
 
+    const qtyInput = row.querySelector('.qty-input');
+
+    // Xử lý tính ngày cho "Lưu bãi"
+    if (target.classList.contains('start-date-input') || target.classList.contains('end-date-input')) {
+        const fpStart = row.querySelector('.start-date-input')._flatpickr;
+        const fpEnd = row.querySelector('.end-date-input')._flatpickr;
+
+        if (fpStart && fpEnd && fpStart.selectedDates.length > 0 && fpEnd.selectedDates.length > 0) {
+            const startDate = fpStart.selectedDates[0];
+            const endDate = fpEnd.selectedDates[0];
+
+            if (endDate >= startDate) {
+                // Set giờ về 0 để tính toán ngày chính xác
+                startDate.setHours(0, 0, 0, 0);
+                endDate.setHours(0, 0, 0, 0);
+                
+                const diffTime = endDate.getTime() - startDate.getTime();
+                const diffDays = Math.round(diffTime / (1000 * 60 * 60 * 24)) + 1;
+                qtyInput.value = diffDays;
+            } else {
+                qtyInput.value = 1;
+            }
+        }
+    }
+
+    // Xử lý tính giờ cho "Chạy điện"
+    if (target.classList.contains('start-datetime-input') || target.classList.contains('end-datetime-input')) {
+        const fpStart = row.querySelector('.start-datetime-input')._flatpickr;
+        const fpEnd = row.querySelector('.end-datetime-input')._flatpickr;
+
+        if (fpStart && fpEnd && fpStart.selectedDates.length > 0 && fpEnd.selectedDates.length > 0) {
+            const startTime = fpStart.selectedDates[0].getTime();
+            const endTime = fpEnd.selectedDates[0].getTime();
+
+            if (endTime >= startTime) {
+                const diffMilliseconds = endTime - startTime;
+                const diffMinutes = diffMilliseconds / (1000 * 60);
+                
+                const totalHours = Math.round((diffMinutes / 60) * 2) / 2;
+                
+                qtyInput.value = totalHours > 0 ? totalHours : 0.5;
+            } else {
+                qtyInput.value = 0;
+            }
+        }
+    }
+
+    recalculateTotals();
+}
 function handleTableRowChange(e) {
     if (e.target.classList.contains('product-select')) {
         const row = e.target.closest('.item-row');
         const priceInput = row.querySelector('.price-input');
+        const qtyInput = row.querySelector('.qty-input');
+        const datePickerDiv = row.querySelector('.date-range-picker');
+        const dateTimePickerDiv = row.querySelector('.datetime-range-picker');
         const selectedValue = e.target.value;
         const selectedProduct = state.products.find(p => p.name === selectedValue);
         const otherOptionName = i18n.otherOption[state.currentLang];
+
+        // [CẢI TIẾN] Sử dụng từ khóa đa ngôn ngữ để nhận dạng dịch vụ
+        const storageKeyword = i18n.storageKeywords[state.currentLang];
+        const powerKeyword = i18n.powerKeywords[state.currentLang];
+
+        const isStorageService = selectedValue.toLowerCase().includes(storageKeyword);
+        const isPowerService = selectedValue.toLowerCase().includes(powerKeyword);
+
+        // ... phần còn lại của hàm giữ nguyên, không cần thay đổi ...
+        datePickerDiv.classList.remove('visible');
+        dateTimePickerDiv.classList.remove('visible');
+        qtyInput.readOnly = false;
+        qtyInput.classList.remove('bg-gray-100');
+
+        if (isStorageService) {
+            datePickerDiv.classList.add('visible');
+            qtyInput.readOnly = true;
+            qtyInput.classList.add('bg-gray-100');
+        } else if (isPowerService) {
+            dateTimePickerDiv.classList.add('visible');
+            qtyInput.readOnly = true;
+            qtyInput.classList.add('bg-gray-100');
+        }
 
         if (selectedValue === otherOptionName) {
             priceInput.value = 0;
@@ -736,7 +946,7 @@ function handleExcelImport(event) {
             const newProducts = json.map(item => ({ name: item['Name'], unit: item['Unit'], price: parseFloat(item['Price']) || 0 }));
             if (confirm(i18n.confirmImport[state.currentLang].replace('{count}', newProducts.length))) {
                 state.products = newProducts;
-                state.products.push({ name: i18n.otherOption[state.currentLang], unit: state.currentLang === 'vi' ? 'Lần' : 'Turn', price: 0 });
+                state.products.push({ name: i18n.otherOption[state.currentLang], unit: state.currentLang === 'vi' ? 'cont' : 'Turn', price: 0 });
                 saveProducts();
                 renderProductManagementTable();
                 showToast(i18n.toastTariffUpdated[state.currentLang]);
@@ -790,7 +1000,8 @@ function bindEvents() {
     elements.langToggleBtn.addEventListener('click', handleLangToggle);
     elements.addRowBtn.addEventListener('click', createTableRow);
     elements.tableBody.addEventListener('click', handleTableRowClick);
-    elements.tableBody.addEventListener('input', debounce(handleTableRowInput, 250));
+    // [SỬA LỖI] Bỏ debounce ở đây để tính toán tức thì
+    elements.tableBody.addEventListener('input', handleTableRowInput);
     elements.tableBody.addEventListener('change', handleTableRowChange);
     elements.newBtn.addEventListener('click', () => resetForm(true));
     elements.saveBtn.addEventListener('click', saveQuotation);
@@ -813,8 +1024,13 @@ function bindEvents() {
 function init(showWelcome = true) {
     loadProducts();
     translateUI();
-    const today = new Date();
-    elements.invoiceDate.value = today.toISOString().slice(0, 10);
+
+    // [CẢI TIẾN] Khởi tạo Flatpickr cho ô "Ngày báo giá"
+    flatpickr(elements.invoiceDate, {
+        dateFormat: "d/m/Y", // Định dạng DD/MM/YYYY
+        defaultDate: "today" // Mặc định là ngày hôm nay
+    });
+
     elements.invoiceNumber.value = generateNextQuoteNumber();
     elements.tableBody.innerHTML = '';
     createTableRow();

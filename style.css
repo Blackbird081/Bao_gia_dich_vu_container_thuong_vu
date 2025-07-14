@@ -89,3 +89,52 @@ body {
         height: 297mm; 
     } 
 }
+/* [CẢI TIẾN] CSS cho các picker tính toán tự động */
+.calculation-picker {
+    display: none; /* Mặc định ẩn đi */
+    gap: 8px;
+    margin-top: 8px;
+    align-items: center;
+    flex-wrap: wrap; /* Cho phép xuống dòng nếu không đủ chỗ */
+}
+
+.calculation-picker.visible {
+    display: flex; /* Hiện ra khi cần */
+}
+
+.calculation-picker label {
+    font-size: 0.8rem;
+    color: #555;
+    white-space: nowrap;
+}
+
+/* Style chung cho các input picker */
+.calculation-picker input {
+    padding: 4px 6px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+}
+/* [CẢI TIẾN] Tùy chỉnh dấu đầu dòng cho danh sách */
+.custom-list {
+    list-style: none; /* Bỏ dấu đầu dòng mặc định */
+    padding-left: 0;
+}
+
+.custom-list li {
+    padding-left: 1.5em; /* Tạo khoảng trống cho icon */
+    position: relative;
+}
+
+/* [SỬA LỖI] Dùng ký tự Unicode thay cho SVG để tương thích với html2canvas */
+.custom-list li::before {
+    content: '✓'; /* Sử dụng ký tự dấu tick Unicode */
+    position: absolute;
+    left: 0;
+    top: 0.1em; /* Điều chỉnh lại vị trí dọc */
+    color: #28a745; /* Màu xanh của dấu tick */
+    font-weight: bold;
+    font-size: 1.2em; /* Tăng kích thước một chút cho đẹp */
+}

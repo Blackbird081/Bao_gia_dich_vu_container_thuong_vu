@@ -12,6 +12,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 
+    <!-- [CẢI TIẾN] Thêm thư viện Flatpickr để chọn ngày giờ -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -36,7 +40,11 @@
                 <h2 id="form-title" class="text-xl font-bold mb-4 border-b pb-2"></h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                     <div><label id="label-quote-no" class="block text-sm font-medium text-gray-700"></label><input type="text" id="invoice-number" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm sm:text-sm"></div>
-                    <div><label id="label-quote-date" class="block text-sm font-medium text-gray-700"></label><input type="date" id="invoice-date" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm sm:text-sm"></div>
+                    <div>
+    <label id="label-quote-date" class="block text-sm font-medium text-gray-700"></label>
+    <!-- [CẢI TIẾN] Thay đổi type="date" thành type="text" để Flatpickr gắn vào -->
+    <input type="text" id="invoice-date" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm sm:text-sm" placeholder="Chọn ngày báo giá">
+</div>
                     <div><label id="label-customer-name" class="block text-sm font-medium text-gray-700"></label><input type="text" id="customer-name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm sm:text-sm"></div>
                     <div><label id="label-address" class="block text-sm font-medium text-gray-700"></label><input type="text" id="customer-address" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm sm:text-sm"></div>
                     <div><label id="label-phone" class="block text-sm font-medium text-gray-700"></label><input type="text" id="customer-phone" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm sm:text-sm"></div>
