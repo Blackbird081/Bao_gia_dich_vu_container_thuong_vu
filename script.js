@@ -1,11 +1,9 @@
-// --- PHIÊN BẢN CUỐI CÙNG - V1.9 (Sửa lỗi Base64) ---
-
 // --- 1. STATE & CONFIG ---
-const staticQrCode = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCAAoACgDASIAAhEBAxEB/8QAGwABAAMBAQEBAAAAAAAAAAAAAAYHCAUEAwL/xAAyEAABAwMCAwUGBwAAAAAAAAABAgMEAAUGBxESIQgTMRQiMkFRYXEVFiQzNEJygZGx/8QAGAEBAQEBAQAAAAAAAAAAAAAAAAECAwT/xAAfEQEAAgICAwEBAAAAAAAAAAAAAQIDERIhMQRBYVH/2gAMAwEAAhEDEQA/APcUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgP/Z";
+const staticQrCode = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCAAoACgDASIAAhEBAxEB/8QAGwABAAMBAQEBAAAAAAAAAAAAAAYHCAUEAwL/xAAyEAABAwMCAwUGBwAAAAAAAAABAgMEAAUGBxESIQgTMRQiMkFRYXEVFiQzNEJygZGx/8QAGAEBAQEBAQAAAAAAAAAAAAAAAAECAwT/xAAfEQEAAgICAwEBAAAAAAAAAAAAAQIDERIhMQRBYVH/2gAMAwEAAhEDEQA/APcUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgP/Z";
 const PLACEHOLDER_IMAGE = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
 
 const i18n = {
-    appTitle: { vi: 'Báo giá dịch vụ', en: 'Service Quotation' },
+    appTitle: { vi: 'Báo giá dịch vụ', en: 'Services Quotation' },
     developedBy: { vi: 'Phát triển bởi: Tiền/Cảng Tân Thuận', en: 'Developed by: Tien/Tan Thuan Port' },
     manageServices: { vi: 'Phương án (Tariff)', en: 'Manage Services (Tariff)' },
     history: { vi: 'Lịch sử báo giá', en: 'Quotation History' },
@@ -38,6 +36,7 @@ const i18n = {
     btnModalSave: { vi: 'Lưu', en: 'Save' },
     btnCancel: { vi: 'Hủy', en: 'Cancel' },
     modalHistoryTitle: { vi: 'Dữ liệu báo giá', en: 'Quotation Data' },
+    exportHistory: { vi: 'Xuất dữ liệu', en: 'Export Data' },
     action: { vi: 'Hành động', en: 'Action' },
     date: { vi: 'Ngày', en: 'Date' },
     customer: { vi: 'Khách hàng', en: 'Customer' },
@@ -49,6 +48,7 @@ const i18n = {
     dateRangeTo: { vi: 'Đến ngày:', en: 'To date:' },
     dateTimeRangeFrom: { vi: 'Từ lúc:', en: 'From:' },
     dateTimeRangeTo: { vi: 'Đến lúc:', en: 'To:' },
+    containerQty: { vi: 'Số lượng container:', en: 'Number of containers:' },
     otherOption: { vi: 'Phương án khác', en: 'Other Service' },
     selectOption: { vi: '-- Chọn phương án --', en: '-- Select a service --' },
     storageKeywords: { vi: 'lưu bãi', en: 'storage' },
@@ -159,6 +159,7 @@ const elements = {
     historyBtn: document.getElementById('history-btn'),
     closeHistoryModalBtn: document.getElementById('close-history-modal-btn'),
     historyTableBody: document.getElementById('history-table-body'),
+    exportHistoryBtn: document.getElementById('export-history-btn'), // [CẢI TIẾN]
     formTitle: document.getElementById('form-title'),
     labelQuoteNo: document.getElementById('label-quote-no'),
     labelQuoteDate: document.getElementById('label-quote-date'),
@@ -225,6 +226,12 @@ function createTableRow() {
                 ${productOptions}
             </select>
             
+            <!-- [CẢI TIẾN] Thêm picker cho số lượng container -->
+            <div class="calculation-picker container-qty-picker">
+                <label>${i18n.containerQty[state.currentLang]}</label>
+                <input type="number" class="container-qty-input" value="1" min="1" style="width: 80px;">
+            </div>
+
             <div class="calculation-picker date-range-picker">
                 <label>${i18n.dateRangeFrom[state.currentLang]}</label>
                 <input type="text" class="start-date-input" placeholder="Chọn ngày bắt đầu">
@@ -239,7 +246,7 @@ function createTableRow() {
                 <input type="text" class="end-datetime-input" placeholder="Chọn ngày & giờ kết thúc">
             </div>
         </td>
-        <td class="px-4 py-2 align-top"><input type="number" class="qty-input mt-1 block w-full rounded-md border-gray-300 shadow-sm sm:text-sm" value="1" min="0" step="0.5"></td>
+        <td class="px-4 py-2 align-top"><input type="number" class="qty-input mt-1 block w-full rounded-md border-gray-300 shadow-sm sm:text-sm bg-gray-100" value="1" min="0" step="0.5" readonly></td>
         <td class="px-4 py-2 align-top"><input type="number" class="price-input mt-1 block w-full rounded-md border-gray-300 shadow-sm sm:text-sm bg-gray-100" value="0" min="0" readonly></td>
         <td class="px-4 py-2 align-top"><span class="line-total font-bold text-gray-900">0 đ</span></td>
         <td class="px-2 py-2 align-top text-center"><button class="remove-row-btn text-red-500 hover:text-red-700 font-bold">×</button></td>
@@ -377,6 +384,7 @@ function translateUI() {
     elements.thModalPrice.textContent = i18n.modalPrice[state.currentLang];
     elements.thModalAction.textContent = i18n.action[state.currentLang];
     elements.modalHistoryTitle.textContent = i18n.modalHistoryTitle[state.currentLang];
+    elements.exportHistoryBtn.textContent = i18n.exportHistory[state.currentLang]; // [CẢI TIẾN]
     elements.thHistoryDate.textContent = i18n.date[state.currentLang];
     elements.thHistoryNo.textContent = i18n.quoteNo[state.currentLang];
     elements.thHistoryCustomer.textContent = i18n.customer[state.currentLang];
@@ -399,7 +407,7 @@ function loadProducts() {
     
     const otherOptionName = i18n.otherOption[state.currentLang];
     if (!state.products.find(p => p.name === otherOptionName)) {
-        state.products.push({ name: otherOptionName, unit: state.currentLang === 'vi' ? 'cont' : 'Turn', price: 0 });
+        state.products.push({ name: otherOptionName, unit: state.currentLang === 'vi' ? 'cont' : 'cont', price: 0 });
     }
 }
 
@@ -459,7 +467,9 @@ function saveQuotation() {
         items: Array.from(elements.tableBody.querySelectorAll('.item-row')).map(row => ({
             name: row.querySelector('.product-select').value,
             quantity: row.querySelector('.qty-input').value,
-            price: row.querySelector('.price-input').value
+            price: row.querySelector('.price-input').value,
+            // [CẢI TIẾN] Lưu lại số lượng container nếu có
+            containerQty: row.querySelector('.container-qty-input')?.value || 1
         })).filter(item => item.name)
     };
 
@@ -487,6 +497,13 @@ function loadQuotation(id) {
         const select = lastRow.querySelector('.product-select'); 
         select.value = item.name; 
         select.dispatchEvent(new Event('change')); 
+        
+        // [CẢI TIẾN] Tải lại số lượng container nếu có
+        const containerQtyInput = lastRow.querySelector('.container-qty-input');
+        if (containerQtyInput) {
+            containerQtyInput.value = item.containerQty || 1;
+        }
+
         lastRow.querySelector('.qty-input').value = item.quantity; 
         if (item.name === i18n.otherOption[state.currentLang]) { 
             lastRow.querySelector('.price-input').value = item.price; 
@@ -541,18 +558,30 @@ function generateA4HTML(qrCodeBase64) {
         if (!productName) return;
 
         const product = state.products.find(p => p.name === productName);
-        const unit = product ? product.unit : (state.currentLang === 'vi' ? 'cont' : 'Turn');
         const qty = row.querySelector('.qty-input').value;
         const price = parseFloat(row.querySelector('.price-input').value) || 0;
         const lineTotal = row.querySelector('.line-total').textContent;
         
-        const displayName = productName === i18n.otherOption[state.currentLang] ? `${productName} ${i18n.pdf.otherOptionNote[state.currentLang]}` : productName;
+        // [CẢI TIẾN] Xử lý hiển thị cho dịch vụ lưu bãi nhiều container
+        const storageKeyword = i18n.storageKeywords[state.currentLang];
+        const isStorageService = productName.toLowerCase().includes(storageKeyword);
+        const containerQty = row.querySelector('.container-qty-input').value;
+        
+        let displayName = productName;
+        let unit = product ? product.unit : (state.currentLang === 'vi' ? 'cont' : 'Turn');
+
+        if (isStorageService && containerQty > 1) {
+            displayName = `${productName} (x${containerQty} cont)`;
+            unit = state.currentLang === 'vi' ? 'ngày/cont' : 'day/cont';
+        } else if (productName === i18n.otherOption[state.currentLang]) {
+            displayName = `${productName} ${i18n.pdf.otherOptionNote[state.currentLang]}`;
+        }
 
         itemsHTML += `
             <tr class="border-b">
                 <td style="padding: 8px; border: 1px solid #ccc; text-align: center;">${index + 1}</td>
                 <td style="padding: 8px; border: 1px solid #ccc; word-break: break-word; white-space: normal;">${displayName}</td>
-                <td style="padding: 8px; border: 1px solid #ccc; text-align: center;">${unit}</td>
+                <td style="padding: 8px; border: 1px solid #ccc; text-align: center; white-space: pre-wrap;">${unit.replace('/', '/\n')}</td>
                 <td style="padding: 8px; border: 1px solid #ccc; text-align: center;">${qty}</td>
                 <td style="padding: 8px; border: 1px solid #ccc; text-align: right;">${formatCurrency(price)}</td>
                 <td style="padding: 8px; border: 1px solid #ccc; text-align: right;">${lineTotal}</td>
@@ -579,7 +608,7 @@ const pdfText = i18n.pdf;
                         
                         <div style="position: relative; z-index: 2; padding-left: 105px;">
                             <h3 style="font-size: 1.125rem; font-weight: 700; margin:0 0 5px 0;">${pdfText.companyName[state.currentLang]}</h3>
-                            <p style="margin: 0; font-size: 10pt;">${pdfText.phone[state.currentLang]}: 02838728546</p>
+                            <p style="margin: 0; font-size: 10pt;">${pdfText.phone[state.currentLang]}:  02838728546</p>
                             <p style="margin: 0; font-size: 10pt;">${pdfText.companyAddress[state.currentLang]}</p>
                             <p style="margin: 0; font-size: 10pt;">${pdfText.email[state.currentLang]}: cms.cont@tanthuanport.vn</p>
                         </div>
@@ -775,9 +804,11 @@ function handleTableRowInput(e) {
     if (!row) return;
 
     const qtyInput = row.querySelector('.qty-input');
+    const containerQtyInput = row.querySelector('.container-qty-input');
+    const containerQty = parseInt(containerQtyInput.value) || 1;
 
     // Xử lý tính ngày cho "Lưu bãi"
-    if (target.classList.contains('start-date-input') || target.classList.contains('end-date-input')) {
+    if (target.classList.contains('start-date-input') || target.classList.contains('end-date-input') || target.classList.contains('container-qty-input')) {
         const fpStart = row.querySelector('.start-date-input')._flatpickr;
         const fpEnd = row.querySelector('.end-date-input')._flatpickr;
 
@@ -786,15 +817,14 @@ function handleTableRowInput(e) {
             const endDate = fpEnd.selectedDates[0];
 
             if (endDate >= startDate) {
-                // Set giờ về 0 để tính toán ngày chính xác
                 startDate.setHours(0, 0, 0, 0);
                 endDate.setHours(0, 0, 0, 0);
                 
                 const diffTime = endDate.getTime() - startDate.getTime();
                 const diffDays = Math.round(diffTime / (1000 * 60 * 60 * 24)) + 1;
-                qtyInput.value = diffDays;
+                qtyInput.value = diffDays * containerQty; // [CẢI TIẾN]
             } else {
-                qtyInput.value = 1;
+                qtyInput.value = 1 * containerQty; // [CẢI TIẾN]
             }
         }
     }
@@ -811,9 +841,7 @@ function handleTableRowInput(e) {
             if (endTime >= startTime) {
                 const diffMilliseconds = endTime - startTime;
                 const diffMinutes = diffMilliseconds / (1000 * 60);
-                
                 const totalHours = Math.round((diffMinutes / 60) * 2) / 2;
-                
                 qtyInput.value = totalHours > 0 ? totalHours : 0.5;
             } else {
                 qtyInput.value = 0;
@@ -830,31 +858,33 @@ function handleTableRowChange(e) {
         const qtyInput = row.querySelector('.qty-input');
         const datePickerDiv = row.querySelector('.date-range-picker');
         const dateTimePickerDiv = row.querySelector('.datetime-range-picker');
+        const containerQtyPickerDiv = row.querySelector('.container-qty-picker'); // [CẢI TIẾN]
         const selectedValue = e.target.value;
         const selectedProduct = state.products.find(p => p.name === selectedValue);
         const otherOptionName = i18n.otherOption[state.currentLang];
 
-        // [CẢI TIẾN] Sử dụng từ khóa đa ngôn ngữ để nhận dạng dịch vụ
         const storageKeyword = i18n.storageKeywords[state.currentLang];
         const powerKeyword = i18n.powerKeywords[state.currentLang];
 
         const isStorageService = selectedValue.toLowerCase().includes(storageKeyword);
         const isPowerService = selectedValue.toLowerCase().includes(powerKeyword);
 
-        // ... phần còn lại của hàm giữ nguyên, không cần thay đổi ...
+        // Reset visibility and state
         datePickerDiv.classList.remove('visible');
         dateTimePickerDiv.classList.remove('visible');
-        qtyInput.readOnly = false;
-        qtyInput.classList.remove('bg-gray-100');
+        containerQtyPickerDiv.classList.remove('visible'); // [CẢI TIẾN]
+        qtyInput.readOnly = true;
+        qtyInput.classList.add('bg-gray-100');
 
         if (isStorageService) {
             datePickerDiv.classList.add('visible');
-            qtyInput.readOnly = true;
-            qtyInput.classList.add('bg-gray-100');
+            containerQtyPickerDiv.classList.add('visible'); // [CẢI TIẾN]
         } else if (isPowerService) {
             dateTimePickerDiv.classList.add('visible');
-            qtyInput.readOnly = true;
-            qtyInput.classList.add('bg-gray-100');
+        } else {
+            // For normal services, make qty editable
+            qtyInput.readOnly = false;
+            qtyInput.classList.remove('bg-gray-100');
         }
 
         if (selectedValue === otherOptionName) {
@@ -970,6 +1000,32 @@ function handleExcelExport() {
     showToast(i18n.toastExportSuccess[state.currentLang]);
 }
 
+// [CẢI TIẾN] Thêm hàm xuất lịch sử ra Excel
+function handleHistoryExport() {
+    const savedQuotations = JSON.parse(localStorage.getItem(`tanthuan_quotations_${state.currentLang}`)) || [];
+    if (savedQuotations.length === 0) {
+        showToast('Không có dữ liệu lịch sử để xuất.', 'info');
+        return;
+    }
+
+    const dataToExport = savedQuotations.map(q => ({
+        'Số Báo Giá': q.invoiceNumber,
+        'Ngày Báo Giá': q.invoiceDate,
+        'Tên Khách Hàng': q.customerName,
+        'Địa Chỉ': q.customerAddress,
+        'Điện Thoại': q.customerPhone,
+        'Ghi Chú': q.customerNotes,
+        'Tổng Tiền': q.totalAmount,
+        'Chi Tiết Dịch Vụ': q.items.map(item => `${item.name} (SL: ${item.quantity}, ĐG: ${item.price})`).join('; ')
+    }));
+
+    const worksheet = XLSX.utils.json_to_sheet(dataToExport);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, 'LichSuBaoGia');
+    XLSX.writeFile(workbook, `LichSuBaoGia_TanThuan_${new Date().toISOString().slice(0,10)}.xlsx`);
+    showToast(i18n.toastExportSuccess[state.currentLang]);
+}
+
 function handleHistoryTableClick(e) {
     const id = e.target.dataset.id;
     if (!id) return;
@@ -1000,7 +1056,6 @@ function bindEvents() {
     elements.langToggleBtn.addEventListener('click', handleLangToggle);
     elements.addRowBtn.addEventListener('click', createTableRow);
     elements.tableBody.addEventListener('click', handleTableRowClick);
-    // [SỬA LỖI] Bỏ debounce ở đây để tính toán tức thì
     elements.tableBody.addEventListener('input', handleTableRowInput);
     elements.tableBody.addEventListener('change', handleTableRowChange);
     elements.newBtn.addEventListener('click', () => resetForm(true));
@@ -1018,6 +1073,7 @@ function bindEvents() {
     elements.historyBtn.onclick = () => { showModal(elements.historyModal); renderHistoryTable(); };
     elements.closeHistoryModalBtn.onclick = () => { hideModal(elements.historyModal); };
     elements.historyTableBody.addEventListener('click', handleHistoryTableClick);
+    elements.exportHistoryBtn.addEventListener('click', handleHistoryExport); // [CẢI TIẾN]
     window.addEventListener('click', handleWindowClick);
 }
 
@@ -1025,10 +1081,9 @@ function init(showWelcome = true) {
     loadProducts();
     translateUI();
 
-    // [CẢI TIẾN] Khởi tạo Flatpickr cho ô "Ngày báo giá"
     flatpickr(elements.invoiceDate, {
-        dateFormat: "d/m/Y", // Định dạng DD/MM/YYYY
-        defaultDate: "today" // Mặc định là ngày hôm nay
+        dateFormat: "d/m/Y",
+        defaultDate: "today"
     });
 
     elements.invoiceNumber.value = generateNextQuoteNumber();
