@@ -99,7 +99,32 @@
     <div id="toast-notification"></div>
     <!-- MODALS -->
     <div id="product-modal" class="modal"><div class="modal-content"><div class="flex justify-between items-center mb-4"><h2 id="modal-product-title" class="text-2xl font-bold"></h2><span class="close-button" id="close-product-modal-btn">×</span></div><div class="flex justify-start mb-4 border-b pb-4 gap-2"><button id="import-excel-btn" class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 w-auto"></button><button id="export-excel-btn" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 w-auto"></button><input type="file" id="excel-importer" class="hidden" accept=".xlsx, .xls"></div><form id="product-form" class="mb-6 bg-gray-100 p-4 rounded-lg"><input type="hidden" id="edit-index" value="-1"><div class="grid grid-cols-1 md:grid-cols-3 gap-4"><div><label id="label-modal-name" class="block font-medium"></label><input type="text" id="product-name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" required></div><div><label id="label-modal-unit" class="block font-medium"></label><input type="text" id="product-unit" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" required></div><div><label id="label-modal-price" class="block font-medium"></label><input type="number" id="product-price" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" required step="any"></div></div><div class="mt-4 flex justify-end"><button id="btn-modal-save" type="submit" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 w-auto"></button><button id="cancel-edit-btn" type="button" class="ml-2 px-4 py-2 bg-gray-400 text-white rounded hover:bg-gray-500 w-auto" style="display: none;"></button></div></form><div class="overflow-y-auto max-h-64"><table class="w-full"><thead class="bg-gray-200"><tr><th id="th-modal-name" class="p-2 text-left"></th><th id="th-modal-unit" class="p-2 text-center"></th><th id="th-modal-price" class="p-2 text-right"></th><th id="th-modal-action" class="p-2 w-32 text-center"></th></tr></thead><tbody id="product-management-table"></tbody></table></div></div></div>
-    <div id="history-modal" class="modal"><div class="modal-content"><div class="flex justify-between items-center mb-4"><h2 id="modal-history-title" class="text-2xl font-bold"></h2><span class="close-button" id="close-history-modal-btn">×</span></div><div class="overflow-y-auto max-h-96"><table class="w-full"><thead class="bg-gray-200"><tr><th id="th-history-date" class="p-2 text-left"></th><th id="th-history-no" class="p-2 text-left"></th><th id="th-history-customer" class="p-2 text-left"></th><th id="th-history-total" class="p-2 text-right"></th><th id="th-history-action" class="p-2 w-32 text-center"></th></tr></thead><tbody id="history-table-body"></tbody></table></div></div></div>
+    <div id="history-modal" class="modal">
+        <div class="modal-content">
+            <div class="flex justify-between items-center mb-4">
+                <h2 id="modal-history-title" class="text-2xl font-bold"></h2>
+                <span class="close-button" id="close-history-modal-btn">×</span>
+            </div>
+            <!-- [CẢI TIẾN] Thêm nút xuất Excel -->
+            <div class="flex justify-end mb-4">
+                <button id="export-history-btn" class="px-4 py-2 bg-green-700 text-white rounded-md shadow-sm hover:bg-green-800"></button>
+            </div>
+            <div class="overflow-y-auto max-h-96">
+                <table class="w-full">
+                    <thead class="bg-gray-200">
+                        <tr>
+                            <th id="th-history-date" class="p-2 text-left"></th>
+                            <th id="th-history-no" class="p-2 text-left"></th>
+                            <th id="th-history-customer" class="p-2 text-left"></th>
+                            <th id="th-history-total" class="p-2 text-right"></th>
+                            <th id="th-history-action" class="p-2 w-32 text-center"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="history-table-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 
     <!-- [SỬA LỖI] Xóa dòng script tải qrcode.js từ CDN. Thư viện này sẽ được nhúng trực tiếp vào file script.js -->
     
